@@ -1,5 +1,5 @@
 {
-  "name": "@cracked/openclaw-tinyfish-search",
+  "name": "@HateYouLittle/openclaw-tinyfish-search",
   "version": "0.1.0",
   "description": "TinyFish Search provider for OpenClaw web_search, built against the current OpenClaw plugin SDK",
   "type": "module",

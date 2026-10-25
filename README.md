@@ -26,6 +26,15 @@ dist/tinyfish-search.js     provider, request builder, result mapping, cache
 
 No build step: `dist/*.js` is plain ESM.
 
+## Install
+
+From ClawHub:
+
+```bash
+openclaw plugins install clawhub:@HateYouLittle/openclaw-tinyfish-search
+openclaw plugins enable tinyfish
+```
+
 ## Install (local development)
 
 ```bash
