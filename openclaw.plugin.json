@@ -1,0 +1,47 @@
+{
+  "id": "tinyfish",
+  "name": "TinyFish Search",
+  "description": "TinyFish Search provider for web_search (official Search API)",
+  "categories": ["web"],
+  "activation": {
+    "onStartup": false
+  },
+  "setup": {
+    "providers": [
+      {
+        "id": "tinyfish",
+        "authMethods": ["api-key"],
+        "envVars": ["TINYFISH_API_KEY"]
+      }
+    ]
+  },
+  "uiHints": {
+    "webSearch.apiKey": {
+      "label": "TinyFish API Key",
+      "help": "TinyFish API key for Web Search (fallback: TINYFISH_API_KEY env var).",
+      "sensitive": true,
+      "placeholder": "tf_..."
+    }
+  },
+  "contracts": {
+    "webSearchProviders": ["tinyfish"]
+  },
+  "configContracts": {
+    "compatibilityRuntimePaths": ["tools.web.search.apiKey"]
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "webSearch": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "apiKey": {
+            "type": ["string", "object"]
+          }
+        }
+      }
+    }
+  }
+}

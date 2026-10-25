@@ -1,0 +1,36 @@
+{
+  "name": "@cracked/openclaw-tinyfish-search",
+  "version": "0.1.0",
+  "description": "TinyFish Search provider for OpenClaw web_search, built against the current OpenClaw plugin SDK",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "openclaw",
+    "openclaw-plugin",
+    "web-search",
+    "tinyfish",
+    "search"
+  ],
+  "files": [
+    "dist",
+    "openclaw.plugin.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "openclaw": ">=2026.5.17"
+  },
+  "openclaw": {
+    "extensions": [
+      "./dist/index.js"
+    ],
+    "compat": {
+      "pluginApi": ">=2026.5.17",
+      "minGatewayVersion": "2026.5.17"
+    },
+    "build": {
+      "openclawVersion": "2026.10.6",
+      "pluginSdkVersion": "2026.10.6"
+    }
+  }
+}
