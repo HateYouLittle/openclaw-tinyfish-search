@@ -1,7 +1,7 @@
 {
   "name": "@HateYouLittle/openclaw-tinyfish-search",
-  "version": "0.1.0",
-  "description": "TinyFish Search provider for OpenClaw web_search, built against the current OpenClaw plugin SDK",
+  "version": "0.2.0",
+  "description": "TinyFish Search and Fetch providers for OpenClaw web_search and web_fetch, built against the current OpenClaw plugin SDK",
   "type": "module",
   "license": "MIT",
   "keywords": [

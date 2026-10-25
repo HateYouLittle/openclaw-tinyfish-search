@@ -1,7 +1,7 @@
 {
   "id": "tinyfish",
   "name": "TinyFish Search",
-  "description": "TinyFish Search provider for web_search (official Search API)",
+  "description": "TinyFish Search and Fetch providers for web_search and web_fetch (official APIs)",
   "categories": ["web"],
   "activation": {
     "onStartup": false
@@ -17,14 +17,21 @@
   },
   "uiHints": {
     "webSearch.apiKey": {
-      "label": "TinyFish API Key",
+      "label": "TinyFish API Key (Search)",
       "help": "TinyFish API key for Web Search (fallback: TINYFISH_API_KEY env var).",
+      "sensitive": true,
+      "placeholder": "tf_..."
+    },
+    "webFetch.apiKey": {
+      "label": "TinyFish API Key (Fetch)",
+      "help": "Optional separate key for Web Fetch; falls back to the Search key or TINYFISH_API_KEY.",
       "sensitive": true,
       "placeholder": "tf_..."
     }
   },
   "contracts": {
-    "webSearchProviders": ["tinyfish"]
+    "webSearchProviders": ["tinyfish"],
+    "webFetchProviders": ["tinyfish"]
   },
   "configContracts": {
     "compatibilityRuntimePaths": ["tools.web.search.apiKey"]
@@ -34,6 +41,15 @@
     "additionalProperties": false,
     "properties": {
       "webSearch": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "apiKey": {
+            "type": ["string", "object"]
+          }
+        }
+      },
+      "webFetch": {
         "type": "object",
         "additionalProperties": false,
         "properties": {
